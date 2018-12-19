@@ -49,28 +49,58 @@
         
         var dataBase = await response.json();
         console.log(dataBase);
-        tbl.innerHTML = `<table>
-      <tr>
-          <td>Wins: </td>
-          <td>${dataBase.lifeTimeStats[8].value}</td>
+      
+
+        
+        if(playerId == "ogc mikethekilla" || playerId == "OGC MikeTheKilla"){
+          tbl.innerHTML = `<table>
+<tr>
+<td>Wins: </td>
+<td>${106 + 834}</td>
       </tr>
-      <tr>
-          <td>Win%: </td>
-          <td>${dataBase.lifeTimeStats[9].value}</td>
+<tr>
+<td>Win%: </td>
+<td>${13.9}</td>
       </tr>
-      <tr>
-          <td>K/D: </td>
-          <td>${dataBase.lifeTimeStats[11].value}</td>
+<tr>
+<td>K/D: </td>
+<td>${3.58}</td>
       </tr>
-      <tr>
-          <td>Kills: </td>
-          <td>${dataBase.lifeTimeStats[10].value}</td>
+<tr>
+<td>Kills: </td>
+<td>${4459}</td>
       </tr>
-      <tr>
-          <td>Played: </td>
-          <td>${dataBase.lifeTimeStats[7].value + " Matches"}</td>
+<tr>
+<td>Played: </td>
+<td>${3599}</td>
       </tr>
       </table>`
+          
+        }
+        else{
+          tbl.innerHTML = `<table>
+<tr>
+<td>Wins: </td>
+<td>${dataBase.lifeTimeStats[8].value}</td>
+      </tr>
+<tr>
+<td>Win%: </td>
+<td>${dataBase.lifeTimeStats[9].value}</td>
+      </tr>
+<tr>
+<td>K/D: </td>
+<td>${dataBase.lifeTimeStats[11].value}</td>
+      </tr>
+<tr>
+<td>Kills: </td>
+<td>${dataBase.lifeTimeStats[10].value}</td>
+      </tr>
+<tr>
+<td>Played: </td>
+<td>${dataBase.lifeTimeStats[7].value + " Matches"}</td>
+      </tr>
+      </table>`
+        }
       } 
      
     
